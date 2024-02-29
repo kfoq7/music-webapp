@@ -1,0 +1,31 @@
+---
+import HeartIcon from '@/icons/HeartIcon.astro'
+---
+
+<section class="py-10 justify-between hidden md:flex">
+  <div class="flex flex-col justify-between">
+    <h2 class="text-sm font-semibold inline">Trending New Song</h2>
+
+    <article class="mt-8 py-2">
+      <h1 class="text-7xl font-bold">Lost Emotions</h1>
+      <div class="flex items-center gap-3 mt-3">
+        <h2 class="text-xl font-semibold">Rion Clarke</h2>
+        <span class="text-gray-silver text-sm">63 Million Plays</span>
+      </div>
+      <div class="mt-7 flex items-center gap-4">
+        <button class="py-3 px-4 bg-[#5773ff] rounded-2xl font-bold">Listen now</button>
+        <div class="p-2.5 border-2 border-white rounded-[50%] cursor-pointer">
+          <HeartIcon className="fill-[#5773ff]" />
+        </div>
+      </div>
+    </article>
+  </div>
+
+  <picture class="mt-12">
+    <img
+      src="/trend.png"
+      alt="trending-top-photo"
+      class="object-cover object-top max-w-[350px] h-auto aspect-[3/2] rounded-lg"
+    />
+  </picture>
+</section>

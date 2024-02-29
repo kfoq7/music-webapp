@@ -1,0 +1,40 @@
+---
+import PlaylistSection from './PlaylistSection.astro'
+import ArrowRightIcon from '@/icons/ArrowRightIcon.astro'
+import PlusSquareIcon from '@/icons/PlusSquareIcon.astro'
+import { music } from '@/data.json'
+---
+
+<PlaylistSection title="Top songs" className="w-[65%]">
+  <ul class="h-[90%] flex flex-col justify-between gap-2">
+    {
+      music.map(({ position, titleSong, author, duration, image }) => {
+        return (
+          <il class="flex items-center justify-between mt-5">
+            <div class="flex items-center gap-3">
+              <span class="text-gray-silver font-semibold text-lg">{position}</span>
+              <picture class="mx-2">
+                <img
+                  src={image}
+                  alt={titleSong}
+                  class="object-cover object-top aspect-[1/1] max-w-14 mx-auto h-auto rounded-lg"
+                />
+              </picture>
+              <div class="mx-1">
+                <h2 class="text-lg font-bold">{titleSong}</h2>
+                <p class="text-sm">{author}</p>
+              </div>
+            </div>
+            <div class="flex items-center justify-center gap-6">
+              <p class="font-semibold">{duration}</p>
+              <div class="p-1.5 bg-[#32323d] rounded-lg border-2 border-[#464748] cursor-pointer">
+                <ArrowRightIcon className="fill-[#5773ff] size-4" />
+              </div>
+              <PlusSquareIcon className="fill-gray-silver size-6 cursor-pointer" />
+            </div>
+          </il>
+        )
+      })
+    }
+  </ul>
+</PlaylistSection>

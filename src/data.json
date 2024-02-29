@@ -1,0 +1,32 @@
+{
+  "music": [
+    {
+      "position": "01",
+      "titleSong": "Sunrise",
+      "author": "Lila Rivera",
+      "duration": "3:45",
+      "image": "/song-1.png"
+    },
+    {
+      "position": "02",
+      "titleSong": "Voyage",
+      "author": "Tyde Brennnan",
+      "duration": "4:45",
+      "image": "/song-2.png"
+    },
+    {
+      "position": "03",
+      "titleSong": "Breeze",
+      "author": "Sola Kim",
+      "duration": "4:22",
+      "image": "/song-3.png"
+    },
+    {
+      "position": "04",
+      "titleSong": "Twilight",
+      "author": "LJett Lawsonn",
+      "duration": "3:17",
+      "image": "/song-4.png"
+    }
+  ]
+}

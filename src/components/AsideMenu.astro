@@ -1,0 +1,64 @@
+---
+import AsideMenuItem from './AsideMenuItem.astro'
+import PodcastIcon from '@/icons/Podcast.astro'
+import ArrowBack from '@/icons/ArrowBack.astro'
+import PulseIcon from '@/icons/PulseIcon.astro'
+---
+
+<nav class="h-full py-4 px-5 flex flex-col xl:py-8 xl:px-10">
+  <div class="mb-10 flex items-center gap-3">
+    <button
+      id="menu-close-button"
+      class="p-1 bg-gray-charcoal rounded-md border-2 border-gray-steel lg:hidden"
+    >
+      <ArrowBack className="fill-white" />
+    </button>
+
+    <div class="flex items-center gap-3">
+      <PulseIcon className="fill-white" />
+      <h1 class="text-2xl font-bold">MusicProg</h1>
+    </div>
+  </div>
+
+  <div class="py-1">
+    <h5 class="text-lg font-semibold text-zinc-500">Menu</h5>
+
+    <ul class="flex flex-col">
+      <AsideMenuItem href="/">Home</AsideMenuItem>
+    </ul>
+  </div>
+
+  <div class="py-1">
+    <h5 class="text-lg text-zinc-500">Playlist</h5>
+
+    <ul>
+      <AsideMenuItem>Recent</AsideMenuItem>
+    </ul>
+  </div>
+
+  <div class="w-full mx-auto flex-1 flex flex-col justify-end pb-4 lg:w-[85%]">
+    <div
+      class="bg-[#32323D] text-white rounded-t-md p-3 flex items-center justify-center gap-4 pointer-events-none"
+    >
+      <picture class="mr-1">
+        <img
+          src="/current.png"
+          alt="current playing"
+          class="object-cover object-top rounded-lg w-full max-w-11 aspect-[44/44]"
+        />
+      </picture>
+      <div class="font-semibold text-sm">
+        <h4>Apple</h4>
+        <span>Homepod</span>
+      </div>
+    </div>
+    <div
+      class="bg-[#25252D] rounded-b-md text-xs p-2 text-zinc-400 fill-zinc-400 hover:text-emerald-500 hover:fill-emerald-500 xl:text-sm"
+    >
+      <div class="flex items-center justify-center gap-2 cursor-pointer">
+        <PodcastIcon />
+        <h3 class="font-semibold">Playing on Device</h3>
+      </div>
+    </div>
+  </div>
+</nav>

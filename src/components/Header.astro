@@ -1,0 +1,50 @@
+---
+import MenuIcon from '@/icons/MenuIcon.astro'
+import SearchIcon from '@/icons/SearchIcon.astro'
+---
+
+<header class="py-3">
+  <nav class="flex items-center justify-between">
+    <div
+      class="flex items-center justify-center gap-5 text-sm text-gray-silver uppercase lg:text-lg"
+    >
+      <button
+        id="menu-open-button"
+        class="p-1 bg-gray-charcoal rounded-md border-2 border-gray-steel lg:hidden"
+      >
+        <MenuIcon className="fill-white" />
+      </button>
+
+      <a href="#">Music</a>
+      <a href="#">Live</a>
+      <a href="#">Podcast</a>
+    </div>
+
+    <div
+      class="p-2.5 flex items-center gap-1.5 border-2 border-gray-steel rounded-lg bg-gray-charcoal hover:cursor-pointer xl:w-[45%] lg:hover:cursor-default"
+    >
+      <SearchIcon className="fill-white" />
+      <input
+        type="text"
+        placeholder="Type here to search"
+        class="w-full bg-transparent border-none outline-none placeholder-gray-silver text-white text-sm hidden xl:block"
+      />
+    </div>
+  </nav>
+</header>
+
+<script>
+  const $menuOpen = document.querySelector('#menu-open-button')
+  const $menuClose = document.querySelector('#menu-close-button')
+  const $sidebar = document.querySelector('aside')
+
+  if ($menuOpen != null && $menuClose != null && $sidebar != null) {
+    $menuOpen.addEventListener('click', () => {
+      $sidebar.style.left = '0'
+    })
+
+    $menuClose.addEventListener('click', () => {
+      $sidebar.style.left = '-100%'
+    })
+  }
+</script>
